@@ -1,0 +1,7 @@
+data/
+.env
+kodi_db_tmp/
+kodi_db_tmp
+*.db
+__pycache__/
+.tmp/
