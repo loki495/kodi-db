@@ -86,5 +86,5 @@ Point Kodi to MySQL in `advancedsettings.xml` using the same `MYSQL_*` host/user
 ## Notes
 
 - `data/`, `.env`, `kodi_db_tmp/` and `*.db` are gitignored.
-- `docker-compose.yml:command` is a service-level `command`, not an env var (fixed from original).
-- `pull-and-update.sh` no longer `cd`s to a hardcoded path; it resolves `SCRIPT_DIR`.
+- `docker-compose.yml` sets a service-level `command` (`--skip-ssl --skip-secure-auth --require_secure_transport=OFF`) so older Kodi clients can connect without TLS; it is not an env var.
+- `pull-and-update.sh` resolves its own location as `SCRIPT_DIR`, so it can run from any directory.
